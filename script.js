@@ -1,4 +1,3 @@
-// Enhanced Scroll Indicator
 window.addEventListener("scroll", () => {
   const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -6,7 +5,6 @@ window.addEventListener("scroll", () => {
   document.getElementById("scrollIndicator").style.width = scrollPercent + "%";
 });
 
-// Navigation and Section Management
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 
@@ -22,7 +20,6 @@ const observer = new IntersectionObserver((entries) => {
       navLink.classList.add("active");
       entry.target.classList.add("active");
 
-      // Create floating particles effect
       createParticles(entry.target);
     }
   });
@@ -40,15 +37,12 @@ navLinks.forEach(link => {
   });
 });
 
-// Floating particles effect
 function createParticles(section) {
   const particlesContainer = section.querySelector('.particles');
   if (!particlesContainer) return;
 
-  // Clear existing particles
   particlesContainer.innerHTML = '';
 
-  // Create new particles
   for (let i = 0; i < 15; i++) {
     const particle = document.createElement('div');
     particle.className = 'particle';
@@ -61,12 +55,10 @@ function createParticles(section) {
   }
 }
 
-// Initialize particles for the active section
 document.addEventListener('DOMContentLoaded', () => {
   createParticles(document.querySelector('section.active'));
 });
 
-// Add smooth hover effects to navigation
 navLinks.forEach(link => {
   link.addEventListener('mouseenter', () => {
     link.style.transform = 'translateY(-3px) scale(1.05)';
