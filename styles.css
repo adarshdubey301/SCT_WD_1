@@ -207,7 +207,6 @@ p {
   background: linear-gradient(135deg, #e17055, #fd79a8);
 }
 
-/* Floating particles animation */
 .particles {
   position: absolute;
   top: 0;
@@ -230,7 +229,6 @@ p {
   50% { transform: translateY(-100px) rotate(180deg); opacity: 1; }
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   nav.navbar {
     flex-wrap: wrap;
